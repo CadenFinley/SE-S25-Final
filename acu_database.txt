@@ -1,0 +1,1218 @@
+Table: prereq
+course prereq 
+DET255 DET220 
+DET260 DET220 
+DET315 DET255 
+
+Table: section_course
+courseID sectionID 
+DET255 10111 
+DET260 10112 
+DET315 10113 
+
+Table: college
+id name 
+COAHS College of Arts, Humanities and Social Sciences 
+COSAE College of Science and Engineering 
+COBS College of Biblical Studies 
+COBA College of Business Administration 
+COHABS College of Health and Behavioral Sciences 
+COHAHS College of Health and Human Services 
+COLAPS College of Leadership and Professional Studies 
+CON College of Nursing 
+COH College of Honors 
+COLAD College of Learning and Development 
+
+Table: student
+id firstname lastname 
+1 Stu1 Student1 
+2 Stu2 Student2 
+3 Stu3 Student3 
+4 Stu4 Student4 
+5 Stu5 Student5 
+6 Stu6 Student6 
+7 Stu7 Student7 
+8 Stu8 Student8 
+9 Stu9 Student9 
+10 Stu10 Student10 
+11 Stu11 Student11 
+12 Stu12 Student12 
+13 Stu13 Student13 
+14 Stu14 Student14 
+15 Stu15 Student15 
+16 Stu16 Student16 
+17 Stu17 Student17 
+18 Stu18 Student18 
+19 Stu19 Student19 
+20 Stu20 Student20 
+21 Stu21 Student21 
+22 Stu22 Student22 
+23 Stu23 Student23 
+24 Stu24 Student24 
+25 Stu25 Student25 
+26 Stu26 Student26 
+27 Stu27 Student27 
+28 Stu28 Student28 
+29 Stu29 Student29 
+30 Stu30 Student30 
+31 Stu31 Student31 
+32 Stu32 Student32 
+33 Stu33 Student33 
+34 Stu34 Student34 
+35 Stu35 Student35 
+36 Stu36 Student36 
+37 Stu37 Student37 
+38 Stu38 Student38 
+39 Stu39 Student39 
+40 Stu40 Student40 
+41 Stu41 Student41 
+42 Stu42 Student42 
+43 Stu43 Student43 
+44 Stu44 Student44 
+45 Stu45 Student45 
+46 Stu46 Student46 
+47 Stu47 Student47 
+48 Stu48 Student48 
+49 Stu49 Student49 
+50 Stu50 Student50 
+51 Stu51 Student51 
+52 Stu52 Student52 
+53 Stu53 Student53 
+54 Stu54 Student54 
+55 Stu55 Student55 
+56 Stu56 Student56 
+57 Stu57 Student57 
+58 Stu58 Student58 
+59 Stu59 Student59 
+60 Stu60 Student60 
+61 Stu61 Student61 
+62 Stu62 Student62 
+63 Stu63 Student63 
+64 Stu64 Student64 
+65 Stu65 Student65 
+66 Stu66 Student66 
+67 Stu67 Student67 
+68 Stu68 Student68 
+69 Stu69 Student69 
+70 Stu70 Student70 
+71 Stu71 Student71 
+72 Stu72 Student72 
+73 Stu73 Student73 
+74 Stu74 Student74 
+75 Stu75 Student75 
+76 Stu76 Student76 
+77 Stu77 Student77 
+78 Stu78 Student78 
+79 Stu79 Student79 
+80 Stu80 Student80 
+81 Stu81 Student81 
+82 Stu82 Student82 
+83 Stu83 Student83 
+84 Stu84 Student84 
+85 Stu85 Student85 
+86 Stu86 Student86 
+87 Stu87 Student87 
+88 Stu88 Student88 
+89 Stu89 Student89 
+90 Stu90 Student90 
+91 Stu91 Student91 
+92 Stu92 Student92 
+93 Stu93 Student93 
+94 Stu94 Student94 
+95 Stu95 Student95 
+96 Stu96 Student96 
+97 Stu97 Student97 
+98 Stu98 Student98 
+99 Stu99 Student99 
+100 Stu100 Student100 
+101 Stu101 Student101 
+102 Stu102 Student102 
+103 Stu103 Student103 
+104 Stu104 Student104 
+105 Stu105 Student105 
+106 Stu106 Student106 
+107 Stu107 Student107 
+108 Stu108 Student108 
+109 Stu109 Student109 
+110 Stu110 Student110 
+111 Stu111 Student111 
+112 Stu112 Student112 
+113 Stu113 Student113 
+114 Stu114 Student114 
+115 Stu115 Student115 
+116 Stu116 Student116 
+117 Stu117 Student117 
+118 Stu118 Student118 
+119 Stu119 Student119 
+120 Stu120 Student120 
+121 Stu121 Student121 
+122 Stu122 Student122 
+123 Stu123 Student123 
+124 Stu124 Student124 
+125 Stu125 Student125 
+126 Stu126 Student126 
+127 Stu127 Student127 
+128 Stu128 Student128 
+129 Stu129 Student129 
+130 Stu130 Student130 
+131 Stu131 Student131 
+132 Stu132 Student132 
+133 Stu133 Student133 
+134 Stu134 Student134 
+135 Stu135 Student135 
+136 Stu136 Student136 
+137 Stu137 Student137 
+138 Stu138 Student138 
+139 Stu139 Student139 
+140 Stu140 Student140 
+141 Stu141 Student141 
+142 Stu142 Student142 
+143 Stu143 Student143 
+144 Stu144 Student144 
+145 Stu145 Student145 
+146 Stu146 Student146 
+147 Stu147 Student147 
+148 Stu148 Student148 
+149 Stu149 Student149 
+150 Stu150 Student150 
+151 Caden Finley 
+
+Table: department
+id name collegeID 
+AES Agricultural and Environmental Sciences COSAE 
+ART Art and Design COAHS 
+BIO Biology COSAE 
+CHEM Chemistry and Biochemistry COSAE 
+COMS Communication and Sociology COAHS 
+ENGP Engineering and Physics COSAE 
+HGS History and Global Studies COAHS 
+JMC Journalism and Mass Communication COAHS 
+LL Language and Literature COAHS 
+LA Liberal Arts COAHS 
+MATH Mathematics COSAE 
+MUS Music COAHS 
+PSCJ Political Science and Criminal Justice COAHS 
+PSY Psychology COHABS 
+THEA Theatre COAHS 
+BMM Bible, Missions and Ministry COBS 
+MFS Marriage and Family Studies COBS 
+GST Graduate School of Theology COBS 
+ACF Accounting and Finance COBA 
+MGS Management Sciences COBA 
+SITC School of Information Technology and Computing COBA 
+CSD Communication Sciences and Disorders COHABS 
+KIN Kinesiology and Nutrition COHABS 
+OT Occupational Therapy COHABS 
+SSW School of Social Work COHABS 
+TED Teacher Education COHAHS 
+SEL School of Educational Leadership COLAPS 
+SHHS School of Health and Human Services COHAHS 
+SPS School of Professional Studies COLAPS 
+NUR School of Nursing CON 
+IDM Interdisciplinary Degrees and Majors IDK 
+HON Honors College COH 
+
+Table: course
+id department title num hrs 
+ACCT210 ACCT Financial Accounting 210 3 
+ACCT302 ACCT Cost Accounting 1 302 3 
+ACCT304 ACCT Income Tax 1 304 3 
+ACCT310 ACCT Intermediate Accounting 1 310 3 
+ACCT311 ACCT Intermediate Accounting 2 311 3 
+ACCT324 ACCT Accounting Information Systems 324 3 
+ACCT405 ACCT Fundamentals of Auditing 405 3 
+ACCT410 ACCT Advanced Accounting 1 410 3 
+ACCT499 ACCT Accounting Internship 499 3 
+ART105 ART Two-Dimensional Design 105 3 
+ART106 ART Three-Dimensional Design 106 3 
+ART111 ART Basic Drawing 111 3 
+ART112 ART Figure Drawing I 112 3 
+ART222 ART Art History: General Survey II 222 3 
+ART317 ART Introduction to Illustration 317 3 
+ART318 ART Digital Illustration 318 3 
+ART351 ART Typography I 351 3 
+BGRK221 BGRK New Testament Greek for Beginners I 221 3 
+BGRK222 BGRK New Testament Greek for Beginners II 222 3 
+BGRK331 BGRK Elementary Greek Readings I 331 3 
+BGRK332 BGRK Elementary Greek Readings II 332 3 
+BGRK441 BGRK Exegetical Greek Seminar I 441 3 
+BGRK442 BGRK Exegetical Greek Seminar II 442 3 
+BHEB472 BHEB Introduction to Hebrew II 472 3 
+BIBH383 BIBH Restoration History 383 3 
+BIBL320 BIBL Introduction to Biblical Interpretation 320 3 
+BIBL365 BIBL General Epistles 365 3 
+BIBL367 BIBL The Book of Acts 367 3 
+BIBL451 BIBL The Pentateuch 451 3 
+BIBL452 BIBL Historical Books of the Old Testament 452 3 
+BIBL453 BIBL The Devotional and Wisdom Literature of the Old Testament 453 3 
+BIBL454 BIBL The Prophetic Literature of the Old Testament 454 3 
+BIBL458 BIBL The Synoptic Gospels 458 3 
+BIBL460 BIBL Galatians and Romans 460 3 
+BIBL461 BIBL The Corinthian Letters 461 3 
+BIBL466 BIBL Book of Revelation 466 3 
+BIBM391 BIBM Ministry in Context 391 3 
+BIBM429 BIBM Field Education 429 2 
+BIBM491 BIBM Senior Capstone Experience 491 1 
+BIBM493 BIBM Preaching 493 3 
+BIBP380 BIBP Introduction to Philosophy 380 3 
+BIBP478 BIBP Philosophy of Religion 478 3 
+BIBP486 BIBP Ethics 486 3 
+BIBP487 BIBP History of Ancient and Medieval Philosophy 487 3 
+BIBP489 BIBP History of Modern Philosophy 489 3 
+BIBT332 BIBT Religious Teachings of C.S. Lewis 332 3 
+BIBT342 BIBT Christianity in Culture 342 3 
+BIBT370 BIBT the church 370 3 
+BIBT379 BIBT The Church 379 3 
+BIBT401 BIBT christian leadership 401 3 
+BIBT403 BIBT christian worship 403 3 
+BIBT439 BIBT Teaching and Learning for Spiritual Formation 439 3 
+BIBT480 BIBT arts and culture: a christian aesthetic 480 3 
+BIBT491 BIBT Theology 491 3 
+BIOL101 BIOL Biology - Human Perspective 101 3 
+BIOL121 BIOL Introductory Biology I 121 3 
+BIOL122 BIOL Introductory Biology I Laboratory 122 1 
+BIOL123 BIOL Introductory Biology II 123 3 
+BIOL124 BIOL Introductory Biology II Laboratory 124 1 
+BIOL312 BIOL Cell Biology 312 3 
+BLAW363 BLAW Introduction to Business Law and Ethics 363 3 
+BLAW365 BLAW Law and Entrepreneurship 365 3 
+BLAW461 BLAW Business Law II 461 3 
+BMIS270 BMIS Living the Mission 270 3 
+BMIS345 BMIS Understanding Culture for Global Service 345 3 
+BMIS371 BMIS Religion in Global Contexts 371 3 
+BMIS420 BMIS Gospel in a Multicultural World 420 3 
+BMIS421 BMIS Mission as Spiritual Formation 421 3 
+BUBH380 BUBH Survey of Church History 380 3 
+BUSA120 BUSA Introduction to Business 120 3 
+BUSA419 BUSA International Business 419 3 
+BUSA435 BUSA Christian Business Leadership Perspectives 435 3 
+CHEM114 CHEM Introductory Organic and Biological Chemistry 114 3 
+CHEM131 CHEM General Chemistry Laboratory I 131 1 
+CHEM132 CHEM General Chemistry Laboratory II 132 1 
+CHEM133 CHEM General Chemistry I 133 3 
+CHEM134 CHEM General Chemistry II 134 3 
+CHEM221 CHEM Organic Chemistry Laboratory I 221 1 
+CHEM223 CHEM Organic Chemistry I 223 3 
+CHEM322 CHEM Organic Chemistry Laboratory II 322 1 
+CHEM324 CHEM Organic Chemistry II 324 3 
+CHEM333 CHEM Physical Chemistry I 333 4 
+CHEM334 CHEM Physical Chemistry II 334 4 
+CHEM335 CHEM Analytical Chemistry I 335 4 
+CHEM356 CHEM Analytical Chemistry II 356 4 
+CHEM423 CHEM Chemistry and Biochemistry Seminar 423 3 
+CHEM443 CHEM Inorganic Chemistry 443 3 
+CHEM453 CHEM Biochemistry I: Foundations of Biochemistry 453 3 
+CHEM454 CHEM Biochemistry II: Gene Expression 454 3 
+CHEM456 CHEM Biochemistry III: Metabolism 456 2 
+CHEM463 CHEM Biochemistry Laboratory I 463 1 
+CRIM205 CRIM Introduction to Criminal Justice 205 3 
+CRIM250 CRIM Police Systems and Practices 250 3 
+CRIM320 CRIM Criminal Law 320 3 
+CRIM330 CRIM Domestic Violence 330 3 
+CRIM350 CRIM Corrections: Prison, Probation, and Parole 350 3 
+CRIM365 CRIM Search and Seizure 365 3 
+CRIM370 CRIM Forensic Evidence 370 3 
+CRIM420 CRIM Law Enforcement Leadership 420 3 
+CRIM430 CRIM Evidence and Procedure 430 3 
+CRIM455 CRIM Professionalism and Ethics in Criminal Justice 455 3 
+CRIM499 CRIM Criminal Justice Intership 499 3 
+CS115 CS Introduction to Programming Using Scripting 115 3 
+CS116 CS Scripting for Analytics 116 3 
+CS120 CS Programing I 120 3 
+CS130 CS Programing II 130 3 
+CS230 CS Object-Oriented Programing 230 3 
+CS315 CS Mobile Application Development 315 3 
+CS316 CS Mobile Game Development 316 3 
+CS330 CS Human-Computer Inter 330 3 
+CS332 CS Design and Analysis 332 3 
+CS352 CS Programing Languages 352 3 
+CS356 CS Operating Systems 356 3 
+CS374 CS Software Engineering 374 3 
+CS375 CS Software Engineering II 375 3 
+CS467 CS Introduction to Artificial Intelligence 467 3 
+DET210 DET Introduction to Digital Entertainment 210 3 
+DET220 DET Introduction to 3D Modeling 220 3 
+DET230 DET Introduction to Animation: Keyframes & Pixels 230 3 
+DET255 DET Game Textures 255 3 
+DET260 DET Game Engines 260 3 
+DET310 DET Digital Entertainment Technology II 310 3 
+DET315 DET Game Materials 315 3 
+DET320 DET Advanced 3D Modeling 320 3 
+DET330 DET 3D Animation: Keyframes and Pixels 330 3 
+DET350 DET Digital Entertainment Development 350 3 
+DET360 DET AR/VR Development 360 3 
+DET365 DET Virtual Production 365 3 
+DET370 DET Serious Games 370 3 
+DET410 DET Digital Entertainment Technology III 410 3 
+DSGN102 DSGN Introduction to Interior Design 102 3 
+DSGN111 DSGN Design Drawing I 111 3 
+DSGN201 DSGN Fundamental Design I 201 3 
+DSGN202 DSGN Fundamental Design II 202 3 
+DSGN211 DSGN Design Drawing II 211 3 
+DSGN221 DSGN History of Architecture and Design I 221 3 
+DSGN222 DSGN History of Architecture and Design II 222 3 
+DSGN232 DSGN Digital Design Communication 232 3 
+DSGN301 DSGN Intermediate Interior Design I 301 3 
+DSGN302 DSGN Intermediate Interior Design II 302 3 
+DSGN351 DSGN Interior Components 351 3 
+DSGN352 DSGN Building Systems 352 3 
+DSGN401 DSGN Advanced Interior Design 401 3 
+DSGN402 DSGN Design, Construction and Details for Interiors 402 3 
+DSGN461 DSGN Professional Principles and Practices (for Design Practitioners) 461 3 
+DSGN463 DSGN Field Experience 463 3 
+ECON260 ECON Principles of Macroeconomics 260 3 
+ECON261 ECON Principles of Microeconomics 261 3 
+ECON312 ECON Game Theory 312 3 
+ECON438 ECON International Poverty and Development 438 3 
+ECON463 ECON Managerial Economics 463 3 
+ENGL301 ENGL Introduction to English Studies 301 3 
+ENGL311 ENGL Literary Theory and Criticism 311 3 
+ENGL320 ENGL Creative Nonfiction Workshop 320 3 
+ENGL321 ENGL Screenwriting 321 3 
+ENGL322 ENGL Fiction Workshop 322 3 
+ENGL323 ENGL Poetry Workshop 323 3 
+ENGL324 ENGL Play Writing Workshop 324 3 
+ENGL325 ENGL Advanced Composition 325 3 
+ENGL326 ENGL Business and Professional Writing 326 3 
+ENGL327 ENGL Scientific and Technical Writing 327 3 
+ENGL328 ENGL Social Justice: A Rhetoric 328 3 
+ENGL329 ENGL Rhetoric as Written Discourse 329 3 
+ENGL330 ENGL Advanced English Grammar 330 3 
+ENGL331 ENGL Narrative for Film and New Media 331 3 
+ENGL332 ENGL Introduction to Film Studies 332 3 
+ENGL333 ENGL Studies in World Cinema 333 3 
+ENGL351 ENGL Literature for Young Adults 351 3 
+ENGL362 ENGL American Literature Before 1860 362 3 
+ENGL363 ENGL American Literature After 1860 363 3 
+ENGL376 ENGL Fiction 376 3 
+ENGL377 ENGL Drama 377 3 
+ENGL378 ENGL Poetry 378 3 
+ENGL380 ENGL Interactive Narratives 380 3 
+ENGL410 ENGL Language and Literature Internship 410 3 
+ENGL432 ENGL Introduction to Linguistics 432 3 
+ENGL441 ENGL Topics in Literary Criticism and Bibliography 441 3 
+ENGL443 ENGL Topics in the English Language 443 3 
+ENGL446 ENGL Topics in American Literature 446 3 
+ENGL447 ENGL Topics in General Literature 447 3 
+ENGL448 ENGL Topics in British Literature Before 1700 448 3 
+ENGL449 ENGL Topics in British Literature After 1700 449 3 
+ENGL459 ENGL English for Secondary Teachers 459 3 
+ENGL464 ENGL American Novel 464 3 
+ENGL470 ENGL Multicultural Literature 470 3 
+ENGL471 ENGL Literature and Belief 471 3 
+ENGL472 ENGL Film and Belief 472 3 
+ENGL473 ENGL Rhetoric and Belief 473 3 
+ENGL481 ENGL Medieval British Literature 481 3 
+ENGL483 ENGL Shakespeare 483 3 
+ENGL484 ENGL Seventeenth-Century British Literature 484 3 
+ENGL495 ENGL Eighteenth-Century British Literature 495 3 
+ENGL496 ENGL Nineteenth-Century British Literature 496 3 
+ENGL497 ENGL Twentieth-Century British Literature 497 3 
+ENGL499 ENGL Studies in World Literature 499 3 
+ENGR115 ENGR Introduction to Engineering and Physics 115 1 
+ENGR116 ENGR Introduction to Engineering and Physics Laboratory 116 1 
+ENGR117 ENGR Computational Tools for Engineering and Physics 117 1 
+ENGR131 ENGR Computer Aided Design and Modeling 131 1 
+ENGR135 ENGR Introduction to Electric Circuits 135 3 
+ENGR136 ENGR Introduction to Electric Circuits Laboratory 136 1 
+ENGR210 ENGR Digital Logic 210 3 
+ENGR217 ENGR Engineering Career Skills 217 1 
+ENGR221 ENGR Statics and Dynamics 221 4 
+ENGR281 ENGR Engineering Thermodynamics 281 3 
+ENGR306 ENGR Engineering Ethics 306 1 
+ENGR317 ENGR Engineering Project Management 317 1 
+ENGR333 ENGR Fluid Mechanics 333 3 
+ENGR350 ENGR Engineering Economics 350 3 
+ENGR355 ENGR Electronic Devices 355 3 
+ENGR356 ENGR Electronic Devices Laboratory 356 1 
+ENGR360 ENGR Electricity and Magnetism 360 3 
+ENGR377 ENGR Statistics for Engineers 377 3 
+ENGR387 ENGR Power Electronics and Electromechanics 387 3 
+ENGR388 ENGR Network Analysis 388 3 
+ENGR390 ENGR Junior Clinic 390 3 
+ENGR410 ENGR Signal Processing 410 3 
+ENGR422 ENGR Embedded Systems 422 3 
+ENGR423 ENGR Embedded Systems Laboratory 423 1 
+ENGR430 ENGR Senior Clinic I 430 3 
+ENGR432 ENGR Senior Clinic II 432 3 
+ENTR120 ENTR Foundations of Entrepreneurship 120 3 
+ENTR305 ENTR Entrepreneurial Mindset 305 3 
+ENTR315 ENTR Business Models 315 3 
+ENTR325 ENTR Raising Capital 325 3 
+ENTR335 ENTR Building Startup Teams 335 3 
+ENTR410 ENTR Social Entrepreneurship 410 3 
+ENTR411 ENTR Entrepreneurial Venture Management 411 3 
+ENTR412 ENTR Launching the Venture 412 3 
+ENTR419 ENTR Global Entrepreneur 419 3 
+ENTR420 ENTR Entrepreneurial Journey 420 3 
+ENTR430 ENTR Topics in Entrepreneurship 430 3 
+FIN310 FIN Financial Managment 310 3 
+FIN499 FIN Finance Internship 499 3 
+FLLA221 FLLA Intermediate Latin I 221 3 
+FLLA222 FLLA Intermediate Latin II 222 3 
+FREN221 FREN Intermediate French I 221 3 
+FREN222 FREN Intermediate French II 222 3 
+GER221 GER Intermediate German I 221 3 
+GER222 GER Intermediate German II 222 3 
+GOVT225 GOVT National Government 225 3 
+GOVT315 GOVT Government and Criminal Justice Research Methods 315 3 
+GOVT384 GOVT American Judicial Process 384 3 
+GOVT432 GOVT Constitutional Law: Civil Rights 432 3 
+GOVT487 GOVT Terrorism Studies 487 3 
+IS222 IS Analytics 1: Statistics 222 3 
+IS324 IS Management Information Systems 324 3 
+IS330 IS Business Geographic Information Systems 330 3 
+IS405 IS Systems Analysis and Design 405 3 
+IS410 IS Enterprise Resource Planning 410 3 
+IS415 IS E-Commerce 415 3 
+IS430 IS Management of Information and Technology Resources 430 3 
+IS432 IS Analytics 3: Data Mining 432 3 
+IS442 IS Analytics 4: Business Analytics Projects 442 3 
+IS499 IS Information Systems Internship 499 3 
+IS524 IS Management Information Systems 524 3 
+IS605 IS Systems Analysis and Design 605 3 
+IT220 IT Introduction to Databases and Database Management 220 3 
+IT221 IT Fundamentals of Networking and Data Communications 221 3 
+IT263 IT Analytics 2: Data Management and Visualization 263 3 
+IT310 IT Introduction to Computer and Information Security 310 3 
+IT325 IT Web Application Development 325 3 
+IT330 IT Analytics 2: Data Managment and Visualization 330 3 
+ITC110 ITC Introduction to Information, Technology, and Computing 110 3 
+ITC125 ITC Introduction to Human-Computer Interaction 125 3 
+ITC399 ITC ITC Research 399 3 
+ITC480 ITC Reflections on Faith and Work Credit Hours 480 3 
+ITC499 ITC Information, Technology, and Computing Internship 499 3 
+JMC165 JMC Media Maker I 165 3 
+JMC166 JMC Media Maker II 166 3 
+JMC224 JMC Media writing 224 3 
+JMC233 JMC Photography 233 3 
+JMC261 JMC Television Production 261 3 
+JMC265 JMC Film Production 265 3 
+JMC302 JMC Introduction to Race and Media 302 1 
+JMC303 JMC Colloquium in Race and Media 303 1 
+JMC321 JMC Student Media Lab(One semester required) 321 0 
+JMC338 JMC Broadcast News and Sport 338 3 
+JMC342 JMC Communication Design 342 3 
+JMC351 JMC Web Publishing 351 3 
+JMC352 JMC Advanced Web Publishing 352 3 
+JMC355 JMC Media Technology 355 3 
+JMC361 JMC Advanced Media Production 361 3 
+JMC364 JMC Media and Religion 364 3 
+JMC365 JMC Film Practicum 365 3 
+JMC367 JMC Social Media 367 3 
+JMC390 JMC Advertising Creativity and Copy writing 390 3 
+JMC405 JMC Visual Portfolio 405 3 
+JMC421 JMC Promotional Video Practicum 421 3 
+JMC465 JMC Documentary Practicum 465 3 
+JMC488 JMC Communication Law 488 3 
+JMC495 JMC JMC Internship (Capstone course) 495 1 
+MATH130 MATH Finite Math for Applications 130 3 
+MATH131 MATH Calculus for Application 131 3 
+MATH185 MATH Calculus I 185 3 
+MATH186 MATH Calculus II 186 3 
+MATH187 MATH Calculus Computer Laboratory 187 1 
+MATH227 MATH Discrete Mathematics 227 3 
+MATH286 MATH Calculus III 286 3 
+MATH325 MATH Linear Algebra 325 3 
+MATH334 MATH Linear Programming 334 3 
+MATH341 MATH Numerical Methods 341 3 
+MATH351 MATH Abstract Algebra I 351 3 
+MATH361 MATH Ordinary Differential Equations 361 4 
+MATH377 MATH Statistical Methods I 377 3 
+MATH432 MATH Introduction to Operations Research 432 3 
+MATH463 MATH Partial Differential Equations 463 3 
+MGMT305 MGMT Foundations of Entrepreneurship 305 3 
+MGMT312 MGMT Game Theory 312 3 
+MGMT320 MGMT Management and Organizational Behavior 320 3 
+MGMT322 MGMT Business and Sustainability 322 3 
+MGMT330 MGMT Management and Organizational Behavior 330 3 
+MGMT331 MGMT Operations Management 331 3 
+MGMT332 MGMT Human Resource Management 332 3 
+MGMT335 MGMT Leadership in Organizations 335 3 
+MGMT337 MGMT Safety, Health and Security 337 3 
+MGMT342 MGMT Total Quality Management 342 3 
+MGMT345 MGMT Introduction to Management Science 345 3 
+MGMT373 MGMT Employee Planning, Recruitment and Selection 373 3 
+MGMT375 MGMT Employee and Labor Relations 375 3 
+MGMT434 MGMT Strategic Philanthropy 434 3 
+MGMT436 MGMT Current Topics in Organizational Behavior 436 3 
+MGMT439 MGMT Strategic Management 439 3 
+MGMT447 MGMT Compensation and Benefits Management 447 3 
+MGMT450 MGMT Career Management 450 3 
+MGMT452 MGMT Logistics and Supply Chain Management 452 3 
+MGMT459 MGMT Project Management 459 3 
+MGMT499 MGMT Management Internship 499 3 
+MGMT532 MGMT Human Resource Management 532 3 
+MGMT629 MGMT Advanced Management Systems 629 3 
+MGMT635 MGMT Organizational Design and Change 635 3 
+MGMT636 MGMT Organizational Behavior 636 3 
+MKTG320 MKTG Principles of Marketing 320 3 
+MKTG333 MKTG Sports Administration 333 3 
+MKTG341 MKTG Marketing Research 341 3 
+MKTG342 MKTG Consumer Behavior 342 3 
+MKTG343 MKTG Personal Selling 343 3 
+MKTG344 MKTG Marketing Promotion 344 3 
+MKTG419 MKTG International Marketing 419 3 
+MKTG432 MKTG Analytics 3: Data Mining 432 3 
+MKTG495 MKTG Marketing Strategy 495 3 
+MKTG499 MKTG Marketing Internship 499 3 
+PHIL379 PHIL Philosophy, Religion and Science 379 3 
+PHIL486 PHIL Ethics 486 3 
+PHYS220 PHYS Engineering Physics I 220 3 
+PHYS221 PHYS Engineering Physics I Laboratory 221 1 
+PHYS222 PHYS Engineering Physics II 222 3 
+PHYS223 PHYS Engineering Physics II Laboratory 223 1 
+PHYS330 PHYS Modern Physics 330 3 
+PHYS393 PHYS Introduction to Research 393 3 
+PSYC120 PSYC Introduction to Psychology 120 3 
+PSYC201 PSYC Psychology Seminar 201 1 
+PSYC211 PSYC Human Dev & Lead in Community 211 3 
+PSYC232 PSYC Developmental Psychology 232 3 
+PSYC233 PSYC Physiological Psychology 233 3 
+PSYC241 PSYC Cognition and Learning 241 3 
+PSYC252 PSYC Mental Health 252 3 
+PSYC278 PSYC Stress and Its Management 278 3 
+PSYC301 PSYC Psychology Seminar II 301 1 
+PSYC305 PSYC Peacemaking 305 3 
+PSYC311 PSYC Elementary Statistics 311 3 
+PSYC342 PSYC Applied Sports Psychology 342 3 
+PSYC343 PSYC Selection & Perf. Appraisal 343 3 
+PSYC345 PSYC Sexual Minorities: Ident & Com 345 3 
+PSYC346 PSYC Freud and Jung 346 3 
+PSYC348 PSYC Psychology and Christianity 348 3 
+PSYC351 PSYC Experimental Psychology 351 4 
+PSYC356 PSYC Health Psychology 356 3 
+PSYC368 PSYC Psychological Tests and Measurements 368 3 
+PSYC370 PSYC Social Psychology 370 3 
+PSYC372 PSYC Child Abuse: Recogn & Response 372 3 
+PSYC373 PSYC Character/Needs Except Children 373 3 
+PSYC374 PSYC Abnormal Child Psychology 374 3 
+PSYC375 PSYC Industrial & Organization Psyc 375 3 
+PSYC376 PSYC Psych. of Mental Retardation 376 3 
+PSYC382 PSYC Abnormal Psychology 382 3 
+PSYC388 PSYC Teams & Team Leadership 388 3 
+PSYC392 PSYC Child Psychology 392 3 
+PSYC396 PSYC Issues of Emerging Adulthood 396 3 
+PSYC401 PSYC Career and Calling 401 1 
+PSYC451 PSYC Statistics in Psyc. Research 451 3 
+PSYC471 PSYC Behavior Modification 471 3 
+PSYC485 PSYC Introduction to Counseling 485 4 
+PSYC493 PSYC History of Theories in Psychology 493 3 
+SOCI111 SOCI Introduction to Sociology 111 3 
+SOCI355 SOCI Social Deviance 355 3 
+SOCI388 SOCI Crime and Delinquency 388 3 
+SOCI415 SOCI Social Research 415 3 
+SPAN221 SPAN Intermediate I 221 3 
+SPAN222 SPAN Intermediate II 222 3 
+SPEN221 SPEN Intermediate Spanish I 221 3 
+SPEN222 SPEN Intermediate Spanish II 222 3 
+THEA227 THEA Introduction to Technical Theatre 227 3 
+
+Table: major
+id title deptID reqtext hrs gpa 
+CS Computer Science SITC Minimum grade of C in CS 120, CS 130, CS 230, IT 220, IT 221, MATH 227 128 2.0 
+ART Interior Design ART Minimum grade of C in art and design courses 128 2.0 
+EE Electrical Engineering ENGR Minimum grade for PHYS or ENGR courses, C 128 2.0 
+
+Table: teachers
+id firstname lastname departmentID adjunct 
+1 Brian Burton SITC 0 
+2 Brent Reeves SITC 0 
+3 James Prather SITC 0 
+4 John Homer SITC 0 
+5 Arisoa Randrianasolo SITC 0 
+6 Karen St. John SITC 0 
+7 Rich Tanner SITC 0 
+8 Geoff Broderick ART 0 
+9 Ryan Feerer ART 0 
+10 Kenneth Jones ART 0 
+11 Kelly Mann ART 0 
+12 Dan McGregor ART 0 
+13 Ronnie Rama ART 0 
+14 Nil Santana ART 0 
+15 Trey Shirley ART 0 
+16 Mike Wiggins ART 0 
+
+Table: section
+crn max room courseID term startdate enddate days 
+10101 30 MBB101 CS120 Spring 2025 2025-01-15 2025-05-10 MWF 
+10202 40 MBB202 CS130 Spring 2025 2025-01-16 2025-05-11 TR 
+10303 25 MBB303 CS220 Summer 2025 2025-06-01 2025-08-10 MW 
+10404 30 MBB110 CRIM205 Summer 2025 2025-06-05 2025-08-15 MW 
+10505 35 MBB120 CRIM250 Fall 2025 2025-08-20 2025-12-10 TTh 
+10606 40 MBB130 CRIM320 Fall 2025 2025-08-22 2025-12-12 MWF 
+10707 25 MBB140 CRIM330 Fall 2025 2025-12-15 2026-01-30 MW 
+10808 30 MBB150 CRIM365 Fall 2025 2025-12-20 2026-02-10 TR 
+10909 35 MBB201 CS230 Spring 2025 2025-01-15 2025-05-10 MWF 
+11001 25 MBB105 CS352 Spring 2025 2025-01-15 2025-05-10 TR 
+11002 30 MBB215 CS374 Spring 2025 2025-01-15 2025-05-10 MWF 
+11003 35 MBB118 IT220 Spring 2025 2025-01-15 2025-05-10 TR 
+11004 35 MBB120 IT221 Spring 2025 2025-01-15 2025-05-10 MW 
+11005 40 MBB125 MATH227 Spring 2025 2025-01-15 2025-05-10 MWF 
+11006 25 MBB115 DET210 Spring 2025 2025-01-15 2025-05-10 TR 
+11007 20 MBB116 DET220 Spring 2025 2025-01-15 2025-05-10 MWF 
+11008 50 FOS110 BIOL121 Spring 2025 2025-01-15 2025-05-10 TR 
+11009 25 FOS111 BIOL122 Spring 2025 2025-01-15 2025-05-10 M 
+11010 40 COBA201 ACCT210 Spring 2025 2025-01-15 2025-05-10 MWF 
+11011 25 MBB205 CS467 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11012 30 MBB206 CS315 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11013 35 MBB127 MATH185 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11014 35 MBB128 MATH186 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11015 40 FOS120 CHEM133 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11016 20 FOS121 CHEM131 Summer 2025 2025-06-01 2025-08-10 TR 
+11017 40 COBA202 MGMT320 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11018 40 COBA205 MKTG320 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11019 45 HSC101 PSYC120 Summer 2025 2025-06-01 2025-08-10 MTWR 
+11020 35 MBB101 CS120 Fall 2025 2025-08-20 2025-12-10 MWF 
+11021 30 MBB102 CS130 Fall 2025 2025-08-20 2025-12-10 TR 
+11022 25 MBB201 CS230 Fall 2025 2025-08-20 2025-12-10 MWF 
+11023 20 MBB207 CS330 Fall 2025 2025-08-20 2025-12-10 TR 
+11024 35 MBB118 IT220 Fall 2025 2025-08-20 2025-12-10 MWF 
+11025 35 MBB120 IT221 Fall 2025 2025-08-20 2025-12-10 TR 
+11026 40 MBB125 MATH227 Fall 2025 2025-08-20 2025-12-10 MWF 
+11027 45 MBB127 MATH185 Fall 2025 2025-08-20 2025-12-10 MWF 
+11028 50 FOS110 BIOL121 Fall 2025 2025-08-20 2025-12-10 TR 
+11029 25 FOS111 BIOL122 Fall 2025 2025-08-20 2025-12-10 W 
+11030 45 FOS120 CHEM133 Fall 2025 2025-08-20 2025-12-10 MWF 
+11031 22 FOS121 CHEM131 Fall 2025 2025-08-20 2025-12-10 T 
+11032 45 COBA201 ACCT210 Fall 2025 2025-08-20 2025-12-10 MWF 
+11033 40 COBA202 MGMT320 Fall 2025 2025-08-20 2025-12-10 TR 
+11034 50 HSC101 PSYC120 Fall 2025 2025-08-20 2025-12-10 MWF 
+11035 25 MBB115 DET210 Fall 2025 2025-08-20 2025-12-10 TR 
+11036 22 MBB116 DET220 Fall 2025 2025-08-20 2025-12-10 MWF 
+11037 30 MBB101 CS115 Fall 2025 2025-12-15 2026-01-30 MTWRF 
+11038 35 MBB125 MATH130 Fall 2025 2025-12-15 2026-01-30 MTWRF 
+11039 40 HSC105 SOCI111 Fall 2025 2025-12-15 2026-01-30 MTWRF 
+11040 35 BSB201 BIBL320 Fall 2025 2025-12-15 2026-01-30 MTWRF 
+10001 12 A100 ART105 Spring 2025 2025-01-14 2025-05-10 MWF 
+10002 15 A120 ART106 Spring 2025 2025-01-14 2025-05-10 MWF 
+10003 25 A200 ART222 Spring 2025 2025-01-14 2025-05-10 TR 
+10004 15 A220 DSGN102 Spring 2025 2025-01-14 2025-05-10 TR 
+10005 10 A300 DSGN111 Spring 2025 2025-01-14 2025-05-10 TR 
+10006 8 A330 DSGN201 Spring 2025 2025-01-14 2025-05-10 MTWRF 
+10007 30 A221 DSGN202 Spring 2025 2025-01-14 2025-05-10 MWF 
+10008 26 A223 DSGN211 Spring 2025 2025-01-14 2025-05-10 TR 
+10009 23 A113 DSGN221 Spring 2025 2025-01-14 2025-05-10 MWF 
+10010 10 A118 DSGN222 Spring 2025 2025-01-14 2025-05-10 MTWRF 
+10011 19 OSC101 ENGR115 Spring 2025 2025-01-14 2025-05-10 MWF 
+10012 30 OSC102 ENGR116 Spring 2026 2025-01-14 2025-05-10 MWF 
+10013 21 OSC110 ENGR131 Spring 2027 2025-01-14 2025-05-10 TR 
+10014 25 OSC200 ENGR135 Spring 2028 2025-01-14 2025-05-10 MWF 
+10015 22 OSC210 ENGR136 Spring 2029 2025-01-14 2025-05-10 TR 
+10016 31 OSC115 ENGR210 Spring 2030 2025-01-14 2025-05-10 TR 
+10017 35 OSC221 ENGR211 Spring 2031 2025-01-14 2025-05-10 MTWRF 
+10018 22 OSC105 ENGR220 Spring 2032 2025-01-14 2025-05-10 MTWRF 
+10019 29 OSC111 ENGR222 Spring 2033 2025-01-14 2025-05-10 TR 
+10020 31 OSC215 ENGR281 Spring 2034 2025-01-14 2025-05-10 MWF 
+10040 40 OSC215 CHEM133 Fall 2025 2025-12-15 2026-01-30 MWF 
+10041 40 OSC215 CHEM131 Fall 2025 2025-12-15 2026-01-30 MWF 
+10042 40 OSC215 CHEM132 Fall 2025 2025-12-15 2026-01-30 MWF 
+10043 40 OSC215 CHEM134 Fall 2025 2025-12-15 2026-01-30 MWF 
+10044 40 OSC215 CHEM221 Fall 2025 2025-12-15 2026-01-30 MWF 
+10045 40 OSC215 CHEM223 Fall 2025 2025-12-15 2026-01-30 MWF 
+10046 40 OSC215 CHEM322 Fall 2025 2025-12-15 2026-01-30 MWF 
+10047 40 OSC215 CHEM324 Fall 2025 2025-12-15 2026-01-30 MWF 
+10048 40 OSC215 CHEM423 Fall 2025 2025-12-15 2026-01-30 MWF 
+10049 40 OSC215 CHEM453 Fall 2025 2025-12-15 2026-01-30 MWF 
+10050 40 OSC215 PSYC120 Fall 2025 2025-12-15 2026-01-30 MWF 
+10051 40 OSC215 PSYC232 Fall 2025 2025-12-15 2026-01-30 MWF 
+10052 40 OSC215 PSYC233 Fall 2025 2025-12-15 2026-01-30 MWF 
+10053 40 OSC215 PSYC241 Fall 2025 2025-12-15 2026-01-30 MWF 
+10054 40 OSC215 PSYC351 Fall 2025 2025-12-15 2026-01-30 MWF 
+10055 40 OSC215 PSYC368 Fall 2025 2025-12-15 2026-01-30 MWF 
+10056 40 OSC215 PSYC370 Fall 2025 2025-12-15 2026-01-30 MWF 
+10057 40 OSC215 PSYC382 Fall 2025 2025-12-15 2026-01-30 MWF 
+10058 40 OSC215 PSYC451 Fall 2025 2025-12-15 2026-01-30 MWF 
+10059 40 OSC215 PSYC485 Fall 2025 2025-12-15 2026-01-30 MWF 
+10060 30 MBB110 CRIM205 Spring 2025 2025-01-13 2025-05-23 MW 
+10061 35 MBB120 CRIM250 Spring 2025 2025-01-13 2025-05-23 TR 
+10062 40 MBB130 CRIM320 Spring 2025 2025-01-13 2025-05-23 MWF 
+10063 25 MBB140 CRIM330 Spring 2025 2025-01-13 2025-05-23 MW 
+10064 30 MBB150 CRIM365 Spring 2025 2025-01-13 2025-05-23 TR 
+10065 30 MBB160 CRIM375 Spring 2025 2025-01-13 2025-05-23 MWF 
+10066 25 MBB170 CRIM410 Spring 2025 2025-01-13 2025-05-23 TR 
+10067 40 MBB180 GOVT225 Spring 2025 2025-01-13 2025-05-23 MW 
+10068 35 MBB190 GOVT315 Spring 2025 2025-01-13 2025-05-23 TR 
+10069 30 MBB200 GOVT384 Spring 2025 2025-01-13 2025-05-23 MWF 
+12001 MBB102 30 CS120 Spring 2025 2025-01-14 2025-05-10 MWF 
+12002 MBB103 35 CS130 Spring 2025 2025-01-14 2025-05-10 TR 
+12003 MBB201 25 CS230 Spring 2025 2025-01-14 2025-05-10 MWF 
+12004 MBB204 25 CS315 Spring 2025 2025-01-14 2025-05-10 TR 
+12005 MBB205 30 CS374 Spring 2025 2025-01-14 2025-05-10 MWF 
+12006 MBB102 25 CS467 Spring 2025 2025-01-14 2025-05-10 TR 
+12007 MBB103 25 CS330 Spring 2025 2025-01-14 2025-05-10 MWF 
+12008 MBB204 20 CS352 Spring 2025 2025-01-14 2025-05-10 TR 
+12009 MBB205 25 CS332 Spring 2025 2025-01-14 2025-05-10 MWF 
+12010 MBB206 25 CS375 Spring 2025 2025-01-14 2025-05-10 TR 
+10120 Don Morris110 15 JMC224 Spring 2025 2025-01-14 2025-05-10 MWF 
+10121 Don Morris118 20 JMC233 Spring 2025 2025-01-14 2025-05-10 TR 
+10122 Don Morris210 15 ENGL321 Spring 2025 2025-01-14 2025-05-10 TR 
+10123 Don Morris310 12 JMC495 Spring 2025 2025-01-14 2025-05-10 MWF 
+10124 Don Morris111 25 JMC421 Spring 2025 2025-01-14 2025-05-10 TR 
+10125 Don Morris219 30 JMC165 Spring 2025 2025-01-14 2025-05-10 MWF 
+10126 Don Morris100 12 BIBL101 Spring 2025 2025-01-14 2025-05-10 MWF 
+10127 Don Morris245 15 BIBT480 Spring 2025 2025-01-14 2025-05-10 TR 
+10128 Don Morris320 12 JMC224 Spring 2025 2025-01-14 2025-05-10 MWF 
+10129 Don Morris300 25 JMC224 Spring 2025 2025-01-14 2025-05-10 TR 
+
+Table: student_section
+studentID sectionID grade 
+1 10001 null 
+90 12001 null 
+90 12014 null 
+91 12001 null 
+91 12016 null 
+92 12002 null 
+92 12014 null 
+93 12001 null 
+93 12017 null 
+94 12002 null 
+94 12016 null 
+95 12003 null 
+95 12014 null 
+96 12001 null 
+96 12017 null 
+97 12002 null 
+97 12015 null 
+98 12003 null 
+98 12016 null 
+99 12001 null 
+99 12014 null 
+1 10002 null 
+2 10001 null 
+2 10002 null 
+2 10003 null 
+3 10001 null 
+3 10005 null 
+3 10004 null 
+4 10006 null 
+4 10007 null 
+4 10008 null 
+5 10009 null 
+5 10010 null 
+6 10002 null 
+6 10005 null 
+6 10008 null 
+7 10001 null 
+7 10004 null 
+7 10009 null 
+8 10003 null 
+8 10006 null 
+8 10010 null 
+9 10001 null 
+9 10007 null 
+9 10005 null 
+10 10002 null 
+10 10004 null 
+10 10006 null 
+12 10011 null 
+12 10012 null 
+13 10013 null 
+13 10014 null 
+14 10015 null 
+14 10016 null 
+14 10017 null 
+15 10018 null 
+15 10019 null 
+15 10020 null 
+16 10015 null 
+16 10016 null 
+17 10017 null 
+17 10018 null 
+18 10011 null 
+18 10019 null 
+18 10013 null 
+19 10012 null 
+19 10015 null 
+20 10013 null 
+20 10015 null 
+20 10019 null 
+20 10020 null 
+60 10060 null 
+61 10061 null 
+61 10062 null 
+62 10063 null 
+62 10064 null 
+63 10065 null 
+63 10066 null 
+63 10067 null 
+64 10068 null 
+64 10069 null 
+64 10060 null 
+65 10061 null 
+65 10062 null 
+65 10063 null 
+
+Table: major_class
+majorID classID 
+CS CS130 
+DET DET130 
+ITC ITC320 
+
+Table: and_prereq
+course prereq 
+CS332 CS130 
+CS332 MATH185 
+CHEM 133 MATH 124 
+CHEM 131 MATH 124 
+CHEM 132 CHEM 133 
+CHEM 134 CHEM 133 
+CHEM 221 CHEM 134 
+CHEM 223 CHEM 134 
+CHEM 322 CHEM 223 
+CHEM 324 CHEM 223 
+CHEM 453 CHEM 324 
+CHEM 454 CHEM 453 
+CHEM 456 CHEM 453 
+CHEM 463 CHEM 453 
+BIOL 123 BIOL 121 
+BIOL 124 BIOL 122 
+BIOL 312 BIOL 123 
+BIOL 312 BIOL 121 
+CHEM 333 CHEM 324 
+CHEM 334 CHEM 333 
+CHEM 335 CHEM 322 
+CHEM 356 CHEM 332 
+CHEM 443 CHEM 324 
+MATH 185 MATH 124 
+MATH 186 MATH 185 
+CHEM 286 MATH 186 
+PHYS 220 MATH 185 
+PHYS 221 PHYS 220 
+PHYS 222 PHYS 220 
+PHYS 223 PHYS 222 
+FIN310 ACCT210 
+FIN310 MATH130 
+IS222 MATH130 
+IT263 IS222 
+MKTG419 MKTG320 
+ACCT302 ACCT210 
+ACCT304 ACCT210 
+ACCT310 ACCT210 
+ACCT311 ACCT310 
+ACCT324 ACCT210 
+ACCT324 BUSA120 
+ACCT405 ACCT311 
+ACCT410 ACCT311 
+BLAW461 ACCT310 
+DSGN201 DSGN111 
+DSGN202 DSGN201 
+DSGN211 DSGN111 
+DSGN211 ART105 
+DSGN301 DSGN202 
+DSGN302 DSGN301 
+DSGN401 DSGN302 
+DSGN401 DSGN351 
+DSGN402 DSGN401 
+CHEM133 CHEM131 
+CHEM133 MATH109 
+ENGR115 MATH124 
+ENGR116 MATH124 
+ENGR135 MATH185 
+ENGR220 PHYS220 
+ENGR220 PHYS221 
+ENGR220 MATH186 
+ENGR222 ENGR220 
+ENGR222 MATH286 
+ENGR281 PHYS222 
+ENGR281 MATH186 
+ENGR306 ENGL112 
+ENGR333 ENGR220 
+ENGR350 MATH131 
+ENGR390 ENGR342 
+ENGR430 ENGR390 
+ENGR432 ENGR430 
+MATH185 MATH124 
+MATH186 MATh185 
+MATH286 MATH186 
+MATH361 MATH186 
+MATH187 MATH131 
+MATH341 MATH186 
+MATH341 CS120 
+MATH325 MATH186 
+MATH463 MATH286 
+MATH463 MATH361 
+PSYC351 PSYC368 
+PSYC451 PSYC351 
+PSYC485 PSYC382 
+PSYC305 ENGL111 
+PSYC343 PSYC368 
+PSYC471 PSYC241 
+CRIM250 CRIM205 
+CRIM320 CRIM205 
+CRIM330 CRIM205 
+CRIM365 CRIM205 
+CRIM420 CRIM205 
+CRIM430 CRIM205 
+CRIM455 CRIM205 
+SPAN221 SPAN112 
+SPAN222 SPAN221 
+GOVT487 GOVT227 
+BIBT332 BIBL211 
+BIBT342 BIBL211 
+BIBT439 BIBL211 
+BGRK222 BGRK221 
+BGRK331 BGRK222 
+BGRK332 BGRK331 
+FREN221 FREN112 
+FREN222 FREN221  
+GER221 GER112  
+GER222 GER221 
+BMIS420 BIBL211 
+BMIS371 BIBL211 
+BIBH380 BIBL211 
+BIBH383 BIBL211 
+BIBH432 BIBL211 
+BIBM493 BIBL320 
+BIBT379 BIBL211 
+BIBT491 BIBL211 
+BIBL320 BIBL211 
+BIBL365 BIBL211 
+BIBL367 BIBL211 
+BIBL451 BIBL211 
+BIBL452 BIBL211 
+BIBL453 BIBL211 
+BIBL454 BIBL211 
+BIBL458 BIBL211 
+BIBL460 BIBL211 
+BIBL461 BIBL211 
+BGRK441 BGRK 332 
+BGRK442 BGRK 441 
+BIBL466 BIBL211 
+BHEB472 BIBL211 
+BIBM391 BIBL211 
+BIBM429 BIBM391 
+BIBM491 BIBM429 
+BMIS345 BIBL211 
+BMIS241 BIBL211 
+SMIS420 BIBM211 
+CS120 MATH109 
+CS130 CS120 
+CS374 CS230 
+IT310 IT221 
+CS341 MATH186 
+CS341 CS120 
+CS352 CS230 
+CS356 CS220 
+CS356 ENGR210 
+CS365 CS332 
+CS365 MATH227 
+CS467 CS332 
+CS467 MATH227 
+CS375 CS374 
+DET260 CS116 
+DET260 CS118 
+DET260 CS130 
+DET260 DET220 
+CS330 ITC125 
+IT325 CS116 
+IS432 IS222 
+CS315 IT220 
+CS136 DET260 
+ENGR442 CS120 
+IS324 ISO324 
+IS330 IS222 
+IS410 IS324 
+IS442 CS115 
+IS442 IS222 
+IS442 IS432 
+DET255 DET220 
+DET315 DET255 
+DET320 DET220 
+DET330 DET220 
+DET350 DET210 
+DET360 DET260 
+DET365 DET260 
+DET370 DET210 
+ART317 ART105 
+ART317 ART112 
+ART112 ART111 
+ART318 ART105 
+ART318 ART317 
+ENGL107 ENGL106 
+ENGL107 ENGL006 
+JMC166 JMC165 
+JMC342 JMC166 
+JMC351 JMC342 
+JMC488 JMC224 
+JMC224 JMC100 
+JMC233 JMC166 
+JMC261 JMC166 
+JMC265 JMC166 
+JMC321 JMC224 
+JMC361 JMC265 
+JMC421 JMC261 
+JMC421 JMC266 
+BIBT342 BIBL101 
+BIBT342 BIBL102 
+BIBT342 BIBL103 
+BIBT379 BIBL101 
+BIBT379 BIBL102 
+BIBM401 BIBL101 
+BIBM401 BIBL102 
+BIBM401 BIBL211 
+BIBM403 BIBL101 
+BIBM403 BIBL102 
+BIBM403 BIBL211 
+BIBM480 BIBL101 
+BIBM480 BIBL102 
+BIBM480 BIBL211 
+JMC338 JMC166 
+JMC338 JMC224 
+JMC352 JMC351 
+JMC365 JMC265 
+JMC390 JMC342 
+JMC390 JMC348 
+JMC405 JMC351 
+JMC405 JMC361 
+
+Table: or_prereq
+course prereq 
+PSYC 370 PSYC 120 
+PSYC 370 SOCI 111 
+PSYC 374 SPED 371 
+PSYC 374 PSYC 232 
+FIN310 ECON260 
+FIN310 ECON261 
+MATH130 MATH109 
+MATH130 MATH120 
+MATH130 MATH123 
+MATH131 MATH109 
+MATH131 MATW109 
+MATH131 MATH130 
+BIBP380 BIBL102 
+BIBP380 BIBL103 
+BIBP478 BIBL102 
+BIBP486 BIBL102 
+BIBP486 BIBL103 
+BIBP487 BIBL102 
+BIBP487 BIBL103 
+BIBP489 BIBL102 
+BIBP489 BIBL103 
+BIBL365 BGRK 221 
+BIBL365 BGRK 222 
+CS120 MATW109 
+CS120 MATH124 
+CS120 MATH185 
+CS120 CS115 
+CS230 CS118 
+CS230 CS130 
+IT220 CS115 
+IT220 CS117 
+IT220 CS120 
+IT221 CS115 
+IT117 CS117 
+IT221 CS120 
+MATH187 MATH131 
+MATH187 MATH185 
+MATH227 CS120 
+MATH227 MATH185 
+MATH337 MATH131 
+MATH337 MATH185 
+DET260 CS116 
+DET260 CS118 
+DET260 CS130 
+DET260 DET220 
+CS330 MKTG320 
+CS330 ART351 
+IT325 CS116 
+IT325 CS118 
+IT325 CS130 
+IS432 IS337 
+IS432 PSYC311 
+IS432 SOCI416 
+IS432 MKTG432 
+CS315 CS116 
+CS315 CS118 
+CS315 CS130 
+IS405 IS324 
+IT225 CS116 
+IT225 CS120 
+DET410 DET350 
+DET410 ITC499 
+JMC495 JMC347 
+JMC495 JMC348 
+JMC495 JMC324 
+JMC495 JMC265 
+BIBL342 BIBL102 
+BIBL342 BIBL103 
+BIBL379 BIBL102 
+BIBL379 BIBL103 
+BIBM401 BIBL102 
+BIBM401 BIBL103 
+BIBM403 BIBL102 
+BIBM403 BIBL103 
+BIBM480 BIBL102 
+BIBM480 BIBL103 
+JMC355 JMC261 
+JMC355 JMC265 
+JMC465 JMC261 
+JMC465 JMC338 
+
+Table: coreq
+course prereq 
+ENGR442 ENGR423 
+
+Table: student_major
+studentID major 
+80 CS 
+81 ART 
+82 BBA 
+83 CJ 
+84 BM 
+85 EE 
+86 PSYC 
+87 BIO 
+88 PSYC 
+89 CS 
+151 CS 
+1 ART 
+2 ART 
+3 ART 
+4 ART 
+5 ART 
+6 ART 
+7 ART 
+8 ART 
+9 ART 
+10 ART 
+11 EE 
+12 EE 
+13 EE 
+14 EE 
+15 EE 
+16 EE 
+17 EE 
+18 EE 
+19 EE 
+20 EE 
+
+Table: concentration
+id major title reqtext 
+SE CS Software Engineering Minimum grade of C in CS 120, CS 130, CS 230; IT 220, IT 221; MATH 227 
+CT CS Computing Theory Minimum grade of C in CS 120, CS 130, CS 230; IT 220, IT 221; MATH 227 
+GDP CS Game Development Minimum grade of C in CS 120, CS 130, CS 230; IT 220, IT 221; MATH 227 
+ANRP ACCT Analytics and Reporting Minimum grade of C in ACCT 210, ACCT 220, ACCT 230, ACCT 240, ACCT 250 
+ACCG ACCT General Accounting Minimum grade of C in ACCT 210, ACCT 220, ACCT 230, ACCT 240, ACCT 250 
+BLAN BBMN Biblical Languages Minimum grade of C in all 300-level or above Bible classes. 
+BIBL BBMN Biblical Text Minimum grade of C in all 300-level or above Bible classes. 
+BIBM BBMN Christian Ministry Minimum grade of C in all 300-level or above Bible classes. 
+BMIS BBMN Missions Minimum grade of C in all 300-level or above Bible classes. 
+BANL MGMT Analytics Minimum of C in each business and emphases course. 
+BABL MGMT Business Leadership Minimum of C in each business and emphases course. 
+EN MGMT Entrepreneurship Minimum of C in each business and emphases course. 
+HR MGMT Human Resources Management Minimum of C in each business and emphases course. 
+BIND MGMT Interdisciplinary Minimum of C in each business and emphases course. 
+BOPR MGMT Operations Minimum of C in each business and emphases course. 
+BCHC BCH ACS Minimum GPA of 2.0 
+BCBS BCH Biomedical Science Minimum GPA of 2.0 
+BCHV BCH Pre-Vet Minimum GPA of 2.0 
+VP DET Virtual Production Minimum grade of C in CS117, DET210, DET260, and DET410. Two portfolio reviews. 
+GD DET Game Development Minimum grade of C in CS117, DET210, DET260, and DET410. Two portfolio reviews. 
+IART INAD Art and Design Minimum grade of C in art and design courses. 
+IBUS INAD Business Minimum grade of C in art and design courses. 
+FLM JMM Film Minimum GPA for graduation of 2.25. 
+MM JMM Media Ministry Minimum GPA for graduation of 2.25. 
+ISAS IS Accounting Systems Minimum grade of C in each business course. 
+ISAN IS Analytics Minimum grade of C in each business course. 
+ISAD IS Application Development Minimum grade of C in each business course. 
