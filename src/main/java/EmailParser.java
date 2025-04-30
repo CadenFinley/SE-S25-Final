@@ -7,6 +7,8 @@ import java.util.List;
 
 public class EmailParser {
 
+    private static final File USER_INFO_FILE = new File("user_info.txt");
+
     /**
      * Parse a JSON string containing email data
      * @param jsonContent The JSON string containing email data

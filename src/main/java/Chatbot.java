@@ -11,8 +11,7 @@ import java.util.Map;
 import org.json.JSONObject;
 
 public class Chatbot {
-
-    private static OpenAiAssistantEngine assistant;
+     static OpenAiAssistantEngine assistant;
     private static final String APIKEY = System.getenv("OPENAI_API_KEY");
     private static final File USER_INFO_FILE = new File("user_info.txt");
     private static final File ACU_DATABASE_FILE = new File("acu_database.txt");
@@ -35,7 +34,7 @@ public class Chatbot {
         assistant.deleteResource("assistants", assistantId);
     }
 
-    private static String setupAssistant() {
+    public static String setupAssistant() {
         String assistantId = assistant.createAssistant(
                 "gpt-4o",
                 "Personal AI Academic Advisor",
@@ -308,6 +307,9 @@ public class Chatbot {
             } else {
                 responses.add(retrievedMessages.get(0));
             }
+
+            // print the response to the console for debugging
+            //System.out.println("Response for email ID " + id + ": " + responses.get(responses.size() - 1));
             
             // Clean up resources
             assistant.deleteResource("threads", threadId);
