@@ -65,7 +65,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.4.1</version>
                 <configuration>
-                    <mainClass>Chatbot</mainClass>
+                    <mainClass>Chatbot_API</mainClass>
                 </configuration>
             </plugin>
 
