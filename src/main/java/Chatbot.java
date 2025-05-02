@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 public class Chatbot {
      static OpenAiAssistantEngine assistant;
-    private static final String APIKEY = System.getenv("OPENAI_API_KEY");
+    static final String APIKEY = System.getenv("OPENAI_API_KEY");
     private static final File USER_INFO_FILE = new File("user_info.txt");
     private static final File ACU_DATABASE_FILE = new File("acu_database.txt");
 
