@@ -1415,4 +1415,9 @@ FLM JMM Film Minimum GPA for graduation of 2.25.
 MM JMM Media Ministry Minimum GPA for graduation of 2.25. 
 ISAS IS Accounting Systems Minimum grade of C in each business course. 
 ISAN IS Analytics Minimum grade of C in each business course. 
-ISAD IS Application Development Minimum grade of C in each business course. 
+ISAD IS Application Development Minimum grade of C in each business course.
+ARTT ART All-Level Teaching Minimum grade of C in each business course.
+GRDS ART Graphic Design Minimum grade of C in each business course.
+PTNG ART Painting Minimum grade of C in each business course.
+SCPT ART Sculpting Minimum grade of C in each business course.
+ATPY ART Therapy Minimum grade of C in each business course.
