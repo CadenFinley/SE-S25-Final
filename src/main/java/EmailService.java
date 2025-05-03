@@ -1,7 +1,5 @@
-package com.acu.assistant;
 
 import java.util.*;
-import java.util.logging.Logger;
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -19,7 +17,6 @@ public class EmailService {
     private String emailServer;
     private int emailSmtpPort;
     private boolean useSmtp;
-    private static final Logger logger = Logger.getLogger(EmailService.class.getName());
 
     public EmailService() throws MessagingException {
         Config config = Config.getInstance();
@@ -56,7 +53,7 @@ public class EmailService {
                 store.close();
                 connected = false;
             } catch (MessagingException e) {
-                logger.warning("Error closing email connection: " + e.getMessage());
+                System.err.println("Error closing email store: " + e.getMessage());
             }
         }
     }
@@ -131,7 +128,7 @@ public class EmailService {
             }
 
         } catch (IOException e) {
-            logger.warning("Error getting email body: " + e.getMessage());
+            System.err.println("Error reading email content: " + e.getMessage());
         }
 
         return body.trim();
@@ -204,7 +201,6 @@ public class EmailService {
                 Transport.send(message);
                 return true;
             } catch (MessagingException e) {
-                logger.warning("Error sending email: " + e.getMessage());
                 throw e;
             }
         }
@@ -273,7 +269,6 @@ public class EmailService {
                 Transport.send(message);
                 return true;
             } catch (MessagingException e) {
-                logger.warning("Error sending email: " + e.getMessage());
                 throw e;
             }
         }
@@ -370,7 +365,6 @@ public class EmailService {
 
             return true;
         } catch (Exception e) {
-            logger.warning("SMTP Send Failed: " + e.getMessage());
             return false;
         }
     }

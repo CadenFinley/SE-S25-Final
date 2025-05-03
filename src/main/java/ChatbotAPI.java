@@ -1,5 +1,5 @@
-package com.acu.assistant;
 
+import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
@@ -8,13 +8,13 @@ public class ChatbotAPI {
 
     private static OpenAiAssistantEngine assistant;
     private static String APIKEY;
-    private static String ACU_DATABASE_FILE;
+    private static File ACU_DATABASE_FILE;
 
     public ChatbotAPI() {
         Config config = Config.getInstance();
         APIKEY = config.getOpenAiApiKey();
         String baseDir = System.getProperty("user.dir");
-        ACU_DATABASE_FILE = Paths.get(baseDir, "resources", "acu_database.txt").toString();
+        ACU_DATABASE_FILE = new File(Paths.get(baseDir, "resources", "acu_database.txt").toUri());
 
         assistant = new OpenAiAssistantEngine(APIKEY);
     }
@@ -75,7 +75,7 @@ public class ChatbotAPI {
                 null,
                 instructions,
                 null,
-                new String[]{"file_search"},
+                List.of("file_search"),
                 null,
                 0.1,
                 0.1,
@@ -87,7 +87,7 @@ public class ChatbotAPI {
             return null;
         }
 
-        if (!java.nio.file.Files.exists(java.nio.file.Paths.get(ACU_DATABASE_FILE))) {
+        if (!java.nio.file.Files.exists(ACU_DATABASE_FILE.toPath())) {
             System.out.println("ACU database file not found at: " + ACU_DATABASE_FILE);
             return null;
         }
@@ -100,7 +100,7 @@ public class ChatbotAPI {
 
         String vectorStoreId = assistant.createVectorStore(
                 "ACU Academic Database",
-                new String[]{acuDatabaseFileID},
+                List.of(acuDatabaseFileID),
                 null,
                 null,
                 fileMetadata
@@ -113,13 +113,17 @@ public class ChatbotAPI {
 
         Map<String, Object> toolResources = Map.of(
                 "file_search", Map.of(
-                        "vector_store_ids", new String[]{vectorStoreId}
+                        "vector_store_ids", List.of(vectorStoreId)
                 )
         );
 
         List<Map<String, String>> tools = List.of(
                 Map.of("type", "file_search")
         );
+
+        List<org.json.JSONObject> jsonTools = tools.stream()
+                .map(org.json.JSONObject::new)
+                .collect(java.util.stream.Collectors.toList());
 
         boolean updateSuccess = assistant.modifyAssistant(
                 assistantId,
@@ -132,7 +136,7 @@ public class ChatbotAPI {
                 null,
                 null,
                 toolResources,
-                tools,
+                jsonTools,
                 null
         );
 
@@ -156,7 +160,10 @@ public class ChatbotAPI {
             ))
                     .collect(java.util.stream.Collectors.toList());
 
-            threadId = assistant.createThread(formattedMessages, null, null);
+            List<org.json.JSONObject> jsonFormattedMessages = formattedMessages.stream()
+                    .map(org.json.JSONObject::new)
+                    .collect(java.util.stream.Collectors.toList());
+            threadId = assistant.createThread(jsonFormattedMessages, null, null);
         } else {
             threadId = assistant.createThread(List.of(), null, null);
         }

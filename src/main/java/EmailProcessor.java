@@ -1,17 +1,13 @@
-package com.acu.assistant;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class EmailProcessor {
-
-    private static final Logger logger = Logger.getLogger(EmailProcessor.class.getName());
 
     public static String extractNameFromEmail(String email) {
         String[] parts = email.split("@");
@@ -77,8 +73,6 @@ public class EmailProcessor {
                 }
                 emailData.put("userName", userName);
 
-                logger.info("User name being used: " + userName);
-
                 List<Map<String, Object>> conversationHistory
                         = conversationManager.getConversationHistory(email.get("from"), 10);
                 List<Map<String, String>> formattedHistory
@@ -99,7 +93,12 @@ public class EmailProcessor {
                         ? response.substring(0, 100) + "..." : response;
                 emailData.put("responsePreview", responsePreview);
 
-                emailService.markAsRead(email.get("id"));
+                try {
+                    emailService.markAsRead(email.get("id"));
+                } catch (MessagingException e) {
+                    System.err.println("Failed to mark email as read: " + e.getMessage());
+                    continue;
+                }
                 String replySubject = email.get("subject").toLowerCase().startsWith("re:")
                         ? email.get("subject") : "Re: " + email.get("subject");
                 emailService.replyToEmail(email.get("id"), email.get("from"), replySubject, formattedResponse);
@@ -123,7 +122,6 @@ public class EmailProcessor {
             errorData.put("message", e.getMessage());
 
             System.out.println(errorData.toString(4));
-            e.printStackTrace();
         }
     }
 
