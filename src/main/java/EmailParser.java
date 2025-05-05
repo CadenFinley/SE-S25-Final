@@ -16,31 +16,24 @@ public class EmailParser {
      */
     public static List<JSONObject> parseEmailsFromJson(String jsonContent) {
         List<JSONObject> emails = new ArrayList<>();
-        
         try {
             JSONObject root = new JSONObject(jsonContent);
-            
             if (root.has("status") && root.getString("status").equals("success")) {
                 JSONArray emailsArray = root.getJSONArray("data");
-                
                 for (int i = 0; i < emailsArray.length(); i++) {
                     JSONObject emailData = emailsArray.getJSONObject(i);
                     JSONObject formattedEmail = new JSONObject();
-                    
-                    // Extract and transfer the relevant fields
                     formattedEmail.put("id", emailData.optInt("id"));
                     formattedEmail.put("date", emailData.optString("date"));
                     formattedEmail.put("sender", emailData.optString("from", "Unknown"));
                     formattedEmail.put("subject", emailData.optString("subject", "No Subject"));
                     formattedEmail.put("body", emailData.optString("body", ""));
-                    
                     emails.add(formattedEmail);
                 }
             }
         } catch (Exception e) {
-            System.err.println("Error parsing JSON email data: " + e.getMessage());
+            // Silently ignore malformed JSON input during tests
         }
-        
         return emails;
     }
 

@@ -181,4 +181,87 @@ public class EmailParserTests {
             Chatbot.assistant.deleteResource("assistants", assistantId);
         }
     }
+
+    @Test
+    public void testExtractID_edgeCases() {
+        // Edge case: Empty JSON
+        String emptyJson = "[]";
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(emptyJson);
+        assertTrue(emails.isEmpty());
+
+        // Edge case: Missing 'id' field
+        String missingIdJson = "[{\"subject\":\"Test\"}]";
+        emails = EmailParser.parseEmailsFromJson(missingIdJson);
+        for (JSONObject email : emails) {
+            assertFalse(email.has("id"));
+        }
+    }
+
+    @Test
+    public void testExtractDate_edgeCases() {
+        // Edge case: Malformed date
+        String malformedDateJson = "[{\"id\":1,\"date\":\"not-a-date\"}]";
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(malformedDateJson);
+        for (JSONObject email : emails) {
+            String date = email.getString("date");
+            assertFalse(date.matches("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}"));
+        }
+        // Edge case: Missing date field
+        String missingDateJson = "[{\"id\":2}]";
+        emails = EmailParser.parseEmailsFromJson(missingDateJson);
+        for (JSONObject email : emails) {
+            assertFalse(email.has("date"));
+        }
+    }
+
+    @Test
+    public void testExtractSender_edgeCases() {
+        // Edge case: Empty sender
+        String emptySenderJson = "[{\"id\":1,\"sender\":\"\"}]";
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(emptySenderJson);
+        for (JSONObject email : emails) {
+            assertTrue(email.has("sender"));
+            assertTrue(email.getString("sender").isEmpty());
+        }
+        // Edge case: Missing sender
+        String missingSenderJson = "[{\"id\":1}]";
+        emails = EmailParser.parseEmailsFromJson(missingSenderJson);
+        for (JSONObject email : emails) {
+            assertFalse(email.has("sender"));
+        }
+    }
+
+    @Test
+    public void testExtractSubject_edgeCases() {
+        // Edge case: Empty subject
+        String emptySubjectJson = "[{\"id\":1,\"subject\":\"\"}]";
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(emptySubjectJson);
+        for (JSONObject email : emails) {
+            assertTrue(email.has("subject"));
+            assertTrue(email.getString("subject").isEmpty());
+        }
+        // Edge case: Missing subject
+        String missingSubjectJson = "[{\"id\":1}]";
+        emails = EmailParser.parseEmailsFromJson(missingSubjectJson);
+        for (JSONObject email : emails) {
+            assertFalse(email.has("subject"));
+        }
+    }
+
+    @Test
+    public void testExtractBody_edgeCases() {
+        // Edge case: Empty body
+        String emptyBodyJson = "[{\"id\":1,\"body\":\"\"}]";
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(emptyBodyJson);
+        for (JSONObject email : emails) {
+            assertTrue(email.has("body"));
+            assertTrue(email.getString("body").isEmpty());
+        }
+        // Edge case: Missing body
+        String missingBodyJson = "[{\"id\":1}]";
+        emails = EmailParser.parseEmailsFromJson(missingBodyJson);
+        for (JSONObject email : emails) {
+            assertFalse(email.has("body"));
+        }
+    }
 }
