@@ -1,0 +1,48 @@
+@startuml
+' Database UML/ER Diagram
+!define table(x) class x << (T,#FFAAAA) >>
+
+' Tables
+table(college) {
+  id : string <<PK>>
+  name : string
+}
+
+table(department) {
+  id : string <<PK>>
+  name : string
+  collegeID : string <<FK>>
+}
+
+table(course) {
+  id : string <<PK>>
+  department : string <<FK>>
+  title : string
+  num : int
+  hrs : int
+}
+
+table(prereq) {
+  course : string <<FK>>
+  prereq : string <<FK>>
+}
+
+table(section_course) {
+  courseID : string <<FK>>
+  sectionID : string <<PK>>
+}
+
+table(student) {
+  id : int <<PK>>
+  firstname : string
+  lastname : string
+}
+
+' Relationships
+department::collegeID --> college::id
+course::department --> department::id
+prereq::course --> course::id
+prereq::prereq --> course::id
+section_course::courseID --> course::id
+student --> section_course
+@enduml
