@@ -46,7 +46,8 @@ public class EmailParser {
         JSONObject emailJson = new JSONObject();
 
         // Extract sender
-        Pattern senderPattern = Pattern.compile("From:\\s*([^<\\r\\n]*(?:<[^>]*>)?)", Pattern.CASE_INSENSITIVE);
+        // Accepts anything up to a newline, including numbers, periods, @, and dashes
+        Pattern senderPattern = Pattern.compile("From:\\s*([^\r\n]+)", Pattern.CASE_INSENSITIVE);
         Matcher senderMatcher = senderPattern.matcher(content);
         if (senderMatcher.find()) {
             String sender = senderMatcher.group(1).trim();
