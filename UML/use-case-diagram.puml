@@ -1,8 +1,19 @@
 @startuml
 left to right direction
+actor User
+rectangle "AI Email System" {
+    usecase "Parse Email" as UC1
+    usecase "Process Request" as UC2
+    usecase "Send to Assistant/API" as UC3
+    usecase "Send Response Email" as UC4
+}
 
-actor Student as student
-actor "OpenAI API" as openai
+User --> UC1 : sends question (email)
+UC1 --> UC2 : parsed content
+UC2 --> UC3 : processed request
+UC3 --> UC4 : API/Assistant response
+UC4 --> User : response email
+@enduml
 
 rectangle "Academic Assistant System" {
   usecase "Start Conversation" as UC1
