@@ -1,8 +1,8 @@
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -11,9 +11,8 @@ import java.util.Map;
 import org.json.JSONObject;
 
 public class Chatbot {
-
-    private static OpenAiAssistantEngine assistant;
-    private static final String APIKEY = System.getenv("OPENAI_API_KEY");
+     static OpenAiAssistantEngine assistant;
+    static final String APIKEY = System.getenv("OPENAI_API_KEY");
     private static final File USER_INFO_FILE = new File("user_info.txt");
     private static final File ACU_DATABASE_FILE = new File("acu_database.txt");
 
@@ -35,7 +34,7 @@ public class Chatbot {
         assistant.deleteResource("assistants", assistantId);
     }
 
-    private static String setupAssistant() {
+    public static String setupAssistant() {
         String assistantId = assistant.createAssistant(
                 "gpt-4o",
                 "Personal AI Academic Advisor",
@@ -195,5 +194,127 @@ public class Chatbot {
         } catch (IOException e) {
             System.out.println("Error reading input: " + e.getMessage());
         }
+    }
+
+    public static String processEmail(String emailContent, String assistantId) {
+        // Parse the email into JSON
+    JSONObject emailJson = (JSONObject) EmailParser.parseEmailsFromJson(emailContent);
+    String sender = emailJson.getString("sender");
+    String subject = emailJson.getString("subject");
+    String body = emailJson.getString("body");
+    
+    // Extract plain text if body contains HTML
+    String plainBody = EmailParser.extractPlainText(body);
+    
+    // Format the query to include email context
+    String query = String.format("SENDER: %s\nSUBJECT: %s\nBODY: %s", 
+                                sender, subject, plainBody);
+    
+    // Create a thread for this email
+    List<JSONObject> messages = List.of(
+        new JSONObject()
+            .put("role", "user")
+            .put("content", query)
+    );
+    
+    String threadId = assistant.createThread(messages, null, null);
+    if (threadId == null) {
+        return "Failed to process email due to thread creation error.";
+    }
+    
+    // Run the assistant
+    String runId = assistant.createRun(
+        threadId, assistantId, null, null, null, null, null,
+        null, null, null, null, null, null, null, null, null, null, null
+    );
+    
+    if (runId == null) {
+        return "Failed to process email due to run creation error.";
+    }
+    
+    boolean completed = assistant.waitForRunCompletion(threadId, runId, 60, 1000);
+    if (!completed) {
+        return "Failed to process email due to timeout or processing error.";
+    }
+    
+    // Get the assistant's response
+    List<String> retrievedMessages = assistant.listMessages(threadId, runId);
+    if (retrievedMessages == null || retrievedMessages.isEmpty()) {
+        return "No response generated for email.";
+    }
+    
+    // Clean up resources
+    assistant.deleteResource("threads", threadId);
+    
+    return retrievedMessages.get(0);
+    }
+
+    /**
+     * Process multiple emails from a JSON string
+     * @param jsonContent JSON string containing email data
+     * @param assistantId The ID of the configured assistant
+     * @return List of responses for each email
+     */
+    public static List<String> processEmailsFromJson(String jsonContent, String assistantId) {
+        List<String> responses = new ArrayList<>();
+        List<JSONObject> emails = EmailParser.parseEmailsFromJson(jsonContent);
+        
+        for (JSONObject email : emails) {
+            String sender = email.getString("sender");
+            String subject = email.optString("subject", "No Subject");
+            String body = email.getString("body");
+            String date = email.optString("date", "");
+            int id = email.optInt("id", 0);
+            
+            // Format the query to include email context
+            String query = String.format("EMAIL ID: %d\nDATE: %s\nSENDER: %s\nSUBJECT: %s\nBODY: %s", 
+                                        id, date, sender, subject, body);
+            
+            // Create a thread for this email
+            List<JSONObject> messages = List.of(
+                new JSONObject()
+                    .put("role", "user")
+                    .put("content", query)
+            );
+            
+            String threadId = assistant.createThread(messages, null, null);
+            if (threadId == null) {
+                responses.add("Failed to process email due to thread creation error.");
+                continue;
+            }
+            
+            // Run the assistant
+            String runId = assistant.createRun(
+                threadId, assistantId, null, null, null, null, null,
+                null, null, null, null, null, null, null, null, null, null, null
+            );
+            
+            if (runId == null) {
+                responses.add("Failed to process email due to run creation error.");
+                continue;
+            }
+            
+            boolean completed = assistant.waitForRunCompletion(threadId, runId, 60, 1000);
+            if (!completed) {
+                responses.add("Failed to process email due to timeout or processing error.");
+                continue;
+            }
+            
+            // Get the assistant's response
+            List<String> retrievedMessages = assistant.listMessages(threadId, runId);
+            if (retrievedMessages == null || retrievedMessages.isEmpty()) {
+                responses.add("No response generated for email.");
+            } else {
+                responses.add(retrievedMessages.get(0));
+            }
+
+            // print the response to the console for debugging
+            //System.out.println("Response for email ID " + id + ": " + responses.get(responses.size() - 1));
+            
+            // Clean up resources
+            assistant.deleteResource("threads", threadId);
+        }
+        
+        return responses;
     }
 }

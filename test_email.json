@@ -1,0 +1,27 @@
+{
+    "status": "success",
+    "emails_count": 3,
+    "data": [
+      {
+        "id": 3,
+        "date": "2025-04-23 22:58:55",
+        "from": "axb19c@acu.edu",
+        "subject": "Assistant Test",
+        "body": "This email is a test.\r\n"
+      },
+      {
+        "id": 2,
+        "date": "2025-04-23 22:53:56",
+        "from": "blade.team.r6@gmail.com",
+        "subject": "hello",
+        "body": "this is a big test\r\n"
+      },
+      {
+        "id": 1,
+        "date": "2025-04-16 18:52:41",
+        "from": "blade.team.r6@gmail.com",
+        "subject": "",
+        "body": "hello\r\n"
+      }
+    ]
+  }

@@ -1,0 +1,109 @@
+@startuml
+' Class Diagram for SE-S25-Final Project
+
+class AssistantClient {
+  - OpenAiAssistantEngine engine
+  - String currentThreadId
+  - String currentAssistantId
+  - String model
+  - String description
+  - String reasoningEffort
+  - List<String> tools
+  - Map<String, String> metadata
+  - Double temperature
+  - Double topP
+  - Map<String, String> toolResources
+  - Integer timeout
+  - Integer pollRateMiliSeconds
+  - String additionalInstructions
+  + withModel(String): AssistantClient
+  + withDescription(String): AssistantClient
+  + withReasoningEffort(String): AssistantClient
+  + withTool(String): AssistantClient
+  + withMetadata(String, String): AssistantClient
+  + withTemperature(double): AssistantClient
+  + withTopP(double): AssistantClient
+  + withToolResource(String, String): AssistantClient
+  + withTimeout(int): AssistantClient
+  + withPollRate(int): AssistantClient
+  + withAdditionalInstructions(String): AssistantClient
+  + createAssistant(String, String): AssistantClient
+  + startConversation(): AssistantClient
+  + sendMessageAndWait(String): List<String>
+  + sendMessagesAndWait(List<String>): List<String>
+  + sendMessage(String): String
+  + endConversation(): void
+  + deleteAssistant(): void
+  + getCurrentThreadId(): String
+  + getCurrentAssistantId(): String
+  + getEngine(): OpenAiAssistantEngine
+}
+
+class Chatbot {
+  - static OpenAiAssistantEngine assistant
+  - static final String APIKEY
+  - static final File USER_INFO_FILE
+  - static final File ACU_DATABASE_FILE
+  + main(String[]): void
+  + setupAssistant(): String
+  + startInteractiveChat(String): void
+  + processEmail(String, String): String
+  + processEmailsFromJson(String, String): List<String>
+}
+
+class Chatbot_API {
+  - static OpenAiAssistantEngine assistant
+  - static final String APIKEY
+  - static final File USER_INFO_FILE
+  - static final File ACU_DATABASE_FILE
+  + main(String[]): void
+  + createExampleThread(): List<JSONObject>
+  + setupAssistant(): String
+  + processUserMessage(String, List<JSONObject>, String): String
+}
+
+class EmailParser {
+  - static final File USER_INFO_FILE
+  + parseEmailsFromJson(String): List<JSONObject>
+  + parseRawEmail(String): JSONObject
+  + parseEmailFile(File, boolean): List<JSONObject>
+  + extractPlainText(String): String
+}
+
+class OpenAiAssistantEngine {
+  - String USER_API_KEY
+  - Map<String, List<String>> responseLog
+  - int maxResponsesPerCategory
+  + logResponse(String, String): void
+  + getResponsesByCategory(String): List<String>
+  + getLatestResponse(String): String
+  + clearCategory(String): void
+  + clearAllResponses(): void
+  + getCategories(): List<String>
+  + testAPIKey(String): void
+  + uploadFile(File, String): String
+  + retrieveFile(String): String
+  + createVectorStore(String, List<String>, JSONObject, JSONObject, Map<String, String>): String
+  + modifyVectorStore(String, JSONObject, Map<String, String>, String): boolean
+  + createAssistant(String, String, String, String, String, List<String>, Map<String, String>, Double, Double, Map<String, String>): String
+  + retrieveAssistant(String): String
+  + modifyAssistant(String, String, String, Map<String, String>, String, String, String, JSONObject, Double, Map<String, Object>, List<JSONObject>, Double): boolean
+  + listAssistants(String, String, int, String): List<String>
+  + createThread(List<JSONObject>, Map<String, String>, Map<String, String>): String
+  + addMessageToThread(String, String): String
+  + listMessages(String, String): List<String>
+  + createRun(String, String, String, String, String, String, List<JSONObject>, Boolean, Integer, Integer, JSONObject, JSONObject, Boolean, JSONObject): String
+  + retrieveRun(String, String): String
+  + retrieveRunStatus(String): String
+  + waitForRunCompletion(String, String, int, int): boolean
+  + cancelRun(String, String): String
+  + deleteResource(String, String): boolean
+}
+
+AssistantClient --> OpenAiAssistantEngine : uses
+Chatbot --> OpenAiAssistantEngine : uses
+Chatbot_API --> OpenAiAssistantEngine : uses
+Chatbot --> EmailParser : uses
+Chatbot_API --> EmailParser : uses
+
+@enduml
