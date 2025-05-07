@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+actor Student as student
+actor "OpenAI API" as openai
+
+rectangle "Academic Assistant System" {
+  usecase "Start Conversation" as UC1
+  usecase "Ask Academic Question" as UC2
+  usecase "Parse Email" as UC3
+  usecase "Process Email" as UC4
+  usecase "Get Course Recommendations" as UC5
+  usecase "Upload User Info" as UC6
+  usecase "Upload Database" as UC7
+  usecase "View Responses" as UC8
+}
+
+student --> UC1
+student --> UC2
+student --> UC3
+student --> UC4
+student --> UC5
+student --> UC8
+UC2 --> openai
+UC4 --> openai
+UC5 --> openai
+UC6 --> UC2
+UC7 --> UC2
+
+@enduml
