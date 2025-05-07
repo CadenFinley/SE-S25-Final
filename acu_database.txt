@@ -176,6 +176,19 @@ id firstname lastname
 149 Stu149 Student149 
 150 Stu150 Student150 
 151 Caden Finley 
+152 Albert Tucker 
+153 Michael Aghasi 
+154 Evan Anderson 
+155 Brooklyn Bullock 
+156 Alex Burgos 
+157 Austin Geisert 
+158 Brendan Gipson 
+159 Nathan Heitmann 
+160 Terrence Naldoza 
+161 Chibuikem Nwabueze-Nwoji 
+162 Brent Reeves 
+163 Grijesh Shrestha 
+164 Grant Wininger 
 
 Table: department
 id name collegeID 
